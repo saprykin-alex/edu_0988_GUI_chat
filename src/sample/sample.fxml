@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="center" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300" prefWidth="275" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <TextArea fx:id="textArea" editable="false" prefHeight="250" prefWidth="275" style="-fx-control-inner-background: #6495ED; -fx-font-family: Consolas; -fx-highlight-fill: #00ff00; -fx-highlight-text-fill: #0000FF; -fx-text-fill: #00ff00;">
+      <font>
+         <Font name="JetBrains Mono Regular" size="16.0" />
+      </font></TextArea>
+    <HBox>
+        <TextField fx:id="textField" onAction="#send" prefHeight="25" prefWidth="195" />
+        <Button onAction="#send" prefHeight="25" prefWidth="80" style="-fx-background-color: #00008B;" text="Отправить" textFill="WHITE" />
+    </HBox>
+    <Button onAction="#connect" prefHeight="25" prefWidth="Infinity" text="Подключиться" />
+
+
+</VBox>
