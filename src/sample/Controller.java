@@ -1,5 +1,6 @@
 package sample;
 
+import com.sun.scenario.effect.impl.sw.java.JSWBlend_SRC_OUTPeer;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -11,6 +12,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Controller {
     Socket socket;
@@ -42,13 +44,14 @@ public class Controller {
                 @Override
                 public void run() {
                     while (true){
+                        String response = "";
+                        ArrayList<String> usersName = new ArrayList<String>();
                         try {
-                            String response = "";
-                            ArrayList<String> usersName = new ArrayList();
                             Object object = ois.readObject();
                             if(object.getClass().equals(usersName.getClass())){
-                                usersName = (ArrayList<String>) object;
-                                onlineUsers.clear();
+                                usersName = ((ArrayList<String>) object);
+                                System.out.println(usersName);
+                                onlineUsers.clear(); // Очищает TextArea
                                 for (String userName:usersName) {
                                     onlineUsers.appendText(userName+"\n");
                                 }

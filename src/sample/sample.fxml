@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <HBox prefHeight="300" prefWidth="400" maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-    <TextArea prefWidth="125" fx:id="onlineUsers"></TextArea>
+    <TextArea editable="false" prefWidth="125" fx:id="onlineUsers"></TextArea>
     <VBox alignment="center"  prefHeight="300" prefWidth="275" >
         <TextArea fx:id="textArea" editable="false" prefHeight="250" prefWidth="275" style="-fx-control-inner-background: #6495ED; -fx-font-family: Consolas; -fx-highlight-fill: #00ff00; -fx-highlight-text-fill: #0000FF; -fx-text-fill: #000000;">
             <font>
